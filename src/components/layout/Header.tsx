@@ -21,7 +21,7 @@ export function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-gradient-to-b from-charcoal via-darkBrown to-charcoal backdrop-blur-md border-b border-charcoal/30 shadow-xl">
+    <header className="sticky top-0 z-50 w-full bg-gradient-to-b from-cream/95 via-warmWhite/98 to-cream/95 backdrop-blur-md border-b border-charcoal/10 shadow-lg">
       {/* Top Section - Logo, Subscribe, Search */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
@@ -32,7 +32,7 @@ export function Header() {
               alt="Cigar Aficionado"
               width={200}
               height={60}
-              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain brightness-0 invert"
+              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
               priority
             />
           </Link>
@@ -47,7 +47,7 @@ export function Header() {
             {/* Search Icon */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-warmWhite hover:text-gold transition-colors duration-200"
+              className="p-2 text-charcoal hover:text-gold transition-colors duration-200"
               aria-label="Search"
             >
               <Search size={20} className="stroke-2" />
@@ -57,7 +57,7 @@ export function Header() {
       </div>
 
       {/* Navigation Bar */}
-      <nav className="border-t border-charcoal/40 bg-charcoal/95 backdrop-blur-sm">
+      <nav className="border-t border-charcoal/10 bg-gradient-to-r from-warmWhite/80 via-cream/90 to-warmWhite/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between overflow-x-auto scrollbar-hide">
             <ul className="flex items-center gap-4 sm:gap-6 lg:gap-8 py-3">
@@ -65,7 +65,7 @@ export function Header() {
                 <li key={link}>
                   <Link
                     href="#"
-                    className="text-warmWhite/90 hover:text-gold font-sans text-xs sm:text-sm font-medium uppercase tracking-wider whitespace-nowrap transition-colors duration-200 relative group"
+                    className="text-charcoal/90 hover:text-gold font-sans text-xs sm:text-sm font-medium uppercase tracking-wider whitespace-nowrap transition-colors duration-200 relative group"
                   >
                     {link}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-200 group-hover:w-full" />
@@ -79,14 +79,14 @@ export function Header() {
 
       {/* Search Overlay */}
       {isSearchOpen && (
-        <div className="absolute top-full left-0 right-0 bg-charcoal/98 backdrop-blur-md border-b border-charcoal/30 shadow-xl">
+        <div className="absolute top-full left-0 right-0 bg-warmWhite/98 backdrop-blur-md border-b border-charcoal/10 shadow-xl">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex items-center gap-3">
-              <Search size={20} className="text-warmWhite/70" />
+              <Search size={20} className="text-charcoal/70" />
               <input
                 type="search"
                 placeholder="Search..."
-                className="flex-1 bg-transparent text-warmWhite placeholder-warmWhite/50 font-sans text-base outline-none border-b border-warmWhite/20 focus:border-gold transition-colors duration-200"
+                className="flex-1 bg-transparent text-charcoal placeholder-charcoal/50 font-sans text-base outline-none border-b border-charcoal/20 focus:border-gold transition-colors duration-200"
                 autoFocus
               />
             </div>

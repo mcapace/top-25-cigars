@@ -25,7 +25,7 @@ export function CigarDetail({ cigar }: CigarDetailProps) {
         </div>
 
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-b from-charcoal via-darkBrown to-charcoal py-12 md:py-16 lg:py-20">
+        <section className="relative bg-gradient-to-br from-cream via-warmWhite via-gold/10 to-cream py-12 md:py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Image */}
@@ -55,15 +55,15 @@ export function CigarDetail({ cigar }: CigarDetailProps) {
               >
                 {/* Rank Badge */}
                 <div className="inline-flex items-center justify-center mb-6">
-                  <div className="rounded-full bg-gradient-to-br from-gold to-amber shadow-2xl flex items-center justify-center border-4 border-warmWhite/20 w-20 h-20 md:w-24 md:h-24">
-                    <span className="text-warmWhite font-serif font-bold text-3xl md:text-4xl">
+                  <div className="rounded-full bg-gradient-to-br from-gold to-amber shadow-2xl flex items-center justify-center border-4 border-cream/50 w-20 h-20 md:w-24 md:h-24">
+                    <span className="text-charcoal font-serif font-bold text-3xl md:text-4xl">
                       #{cigar.rank}
                     </span>
                   </div>
                 </div>
 
                 {/* Name */}
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-warmWhite mb-4 leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-charcoal mb-4 leading-tight">
                   {cigar.name}
                 </h1>
 
@@ -72,14 +72,14 @@ export function CigarDetail({ cigar }: CigarDetailProps) {
                   <p className="text-gold font-sans text-lg md:text-xl font-medium">
                     {cigar.vitola}
                   </p>
-                  <p className="text-cream/80 font-sans text-base md:text-lg">
+                  <p className="text-stone font-sans text-base md:text-lg">
                     {cigar.manufacturer}
                   </p>
                 </div>
 
                 {/* Score */}
                 {cigar.score > 0 && (
-                  <div className="inline-flex items-baseline gap-2 mb-6 px-6 py-3 bg-charcoal/50 backdrop-blur-sm rounded-xl border-2 border-gold/40">
+                  <div className="inline-flex items-baseline gap-2 mb-6 px-6 py-3 bg-gradient-to-r from-gold/20 to-amber/20 backdrop-blur-sm rounded-xl border-2 border-gold/40">
                     <span className="text-gold font-serif font-black text-4xl md:text-5xl">
                       {cigar.score}
                     </span>
@@ -89,8 +89,8 @@ export function CigarDetail({ cigar }: CigarDetailProps) {
 
                 {/* Price */}
                 <div className="mb-8">
-                  <p className="text-cream/70 font-sans text-sm uppercase tracking-wider mb-1">Price</p>
-                  <p className="text-warmWhite font-serif font-bold text-2xl md:text-3xl">${cigar.price}</p>
+                  <p className="text-stone font-sans text-sm uppercase tracking-wider mb-1">Price</p>
+                  <p className="text-charcoal font-serif font-bold text-2xl md:text-3xl">${cigar.price}</p>
                 </div>
 
                 {/* Video Button */}
