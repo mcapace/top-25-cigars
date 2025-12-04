@@ -1,0 +1,60 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Large cigar images (TIF files over 100MB)
+public/images/cigars/*.tif
+
+# Large PDF files
+public/PDF/*.pdf
+*.tif
+*.TIF
+
+# Cigar data - sensitive until reveal
+# Note: lib/data/cigars.server.ts is already committed
+# To remove from git history, use: git filter-branch or BFG Repo-Cleaner
+lib/data/cigars.server.ts
+cigars-data.ts
+*.cigar-data.*
+
+# Temporary reference files
+temp-wa-reference/
