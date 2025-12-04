@@ -64,17 +64,16 @@ export function CigarCard({ cigar, index, isFeatured = false }: CigarCardProps) 
           </div>
         )}
 
-        {/* Cigar Image */}
-        <div className={`relative ${isFeatured ? 'w-1/2 h-full' : 'h-80'} flex-shrink-0 bg-cream flex items-center justify-center overflow-hidden group`}>
+        {/* Cigar Image - Full Bleed */}
+        <div className={`relative ${isFeatured ? 'w-1/2 h-full' : 'h-80'} flex-shrink-0 bg-cream overflow-hidden group`}>
           {!imageLoaded && (
             <div className="absolute inset-0 bg-charcoal/5 animate-pulse" />
           )}
           <Image
             src={cigar.imageUrl}
             alt={cigar.name}
-            width={isFeatured ? 400 : 240}
-            height={isFeatured ? 600 : 360}
-            className="object-contain max-h-full max-w-full transition-opacity duration-300"
+            fill
+            className="object-cover transition-opacity duration-300"
             style={{ 
               opacity: imageLoaded ? 1 : 0
             }}

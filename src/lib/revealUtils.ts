@@ -8,20 +8,18 @@ import type { Cigar } from "@/data/cigars";
  * Client-safe reveal schedule (matches server-side schedule)
  * Reveals happen at 10:00 AM Eastern Time (EST)
  *
- * Dec 1: Ranks 25-16 (10 cigars)
- * Dec 2: Ranks 15-11 (5 cigars)
- * Dec 3: Ranks 10, 9, 8 (3 cigars)
- * Dec 4: Ranks 7, 6, 5 (3 cigars)
- * Dec 5: Ranks 4, 3, 2 (3 cigars)
- * Dec 6: Rank 1 - Cigar of the Year
+ * Monday 12/15: Ranks 10, 9, 8 (3 cigars)
+ * Tuesday 12/16: Ranks 7, 6, 5 (3 cigars)
+ * Wednesday 12/17: Ranks 4, 3, 2 (3 cigars)
+ * Thursday 12/18: Rank 1 - Cigar of the Year
+ * Friday 12/19: Ranks 11-25 (15 cigars)
  */
 const REVEAL_SCHEDULE: Record<string, number[]> = {
-  '2025-12-01': [25, 24, 23, 22, 21, 20, 19, 18, 17, 16],
-  '2025-12-02': [15, 14, 13, 12, 11],
-  '2025-12-03': [10, 9, 8],
-  '2025-12-04': [7, 6, 5],
-  '2025-12-05': [4, 3, 2],
-  '2025-12-06': [1],
+  '2025-12-15': [10, 9, 8],
+  '2025-12-16': [7, 6, 5],
+  '2025-12-17': [4, 3, 2],
+  '2025-12-18': [1],
+  '2025-12-19': [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
 };
 
 /**

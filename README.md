@@ -5,7 +5,7 @@ A premium microsite for Cigar Aficionado magazine showcasing the Top 25 Cigars o
 ## 🎯 Project Overview
 
 This Next.js application features:
-- **Progressive Reveal System**: Cigars are revealed on a schedule (Dec 1-6, 2025)
+- **Progressive Reveal System**: Cigars are revealed on a schedule (Dec 15-19, 2025)
 - **Server-Side Protection**: Full cigar data is only sent to clients after reveal time
 - **Premium Design**: Editorial-style layout with smooth animations
 - **Mobile-First**: Fully responsive and optimized for all devices
@@ -137,12 +137,11 @@ ca-top25-cigars/
 ### Reveal Schedule
 
 Cigars are revealed according to this schedule (all at 10:00 AM EST):
-- **December 1, 2025**: Ranks 25-16 (10 cigars)
-- **December 2, 2025**: Ranks 15-11 (5 cigars)
-- **December 3, 2025**: Ranks 10, 9, 8 (3 cigars)
-- **December 4, 2025**: Ranks 7, 6, 5 (3 cigars)
-- **December 5, 2025**: Ranks 4, 3, 2 (3 cigars)
-- **December 6, 2025**: Rank 1 - Cigar of the Year
+- **Monday, December 15, 2025**: Ranks 10, 9, 8 (3 cigars)
+- **Tuesday, December 16, 2025**: Ranks 7, 6, 5 (3 cigars)
+- **Wednesday, December 17, 2025**: Ranks 4, 3, 2 (3 cigars)
+- **Thursday, December 18, 2025**: Rank 1 - Cigar of the Year
+- **Friday, December 19, 2025**: Ranks 11-25 (15 cigars)
 
 **Important**: The `revealDate` must be in UTC. For 10:00 AM EST, use `15:00:00Z` (EST is UTC-5).
 

@@ -10,50 +10,43 @@ export interface DayInfo {
   dayIndex: number;
 }
 
-export const COUNTDOWN_TARGET = new Date("2025-12-01T15:00:00Z"); // Dec 1, 2025 10:00 AM EST
+export const COUNTDOWN_TARGET = new Date("2025-12-15T15:00:00Z"); // Dec 15, 2025 10:00 AM EST
 
 export const TIMELINE_DAYS: DayInfo[] = [
   {
-    date: new Date("2025-12-01T15:00:00Z"),
-    label: "Dec 1",
-    ranks: "#25-16",
-    rankNumbers: [25, 24, 23, 22, 21, 20, 19, 18, 17, 16],
+    date: new Date("2025-12-15T15:00:00Z"),
+    label: "Dec 15",
+    ranks: "#10, 9, 8",
+    rankNumbers: [10, 9, 8],
     dayIndex: 0,
   },
   {
-    date: new Date("2025-12-02T15:00:00Z"),
-    label: "Dec 2",
-    ranks: "#15-11",
-    rankNumbers: [15, 14, 13, 12, 11],
+    date: new Date("2025-12-16T15:00:00Z"),
+    label: "Dec 16",
+    ranks: "#7, 6, 5",
+    rankNumbers: [7, 6, 5],
     dayIndex: 1,
   },
   {
-    date: new Date("2025-12-03T15:00:00Z"),
-    label: "Dec 3",
-    ranks: "#10, 9, 8",
-    rankNumbers: [10, 9, 8],
+    date: new Date("2025-12-17T15:00:00Z"),
+    label: "Dec 17",
+    ranks: "#4, 3, 2",
+    rankNumbers: [4, 3, 2],
     dayIndex: 2,
   },
   {
-    date: new Date("2025-12-04T15:00:00Z"),
-    label: "Dec 4",
-    ranks: "#7, 6, 5",
-    rankNumbers: [7, 6, 5],
+    date: new Date("2025-12-18T15:00:00Z"),
+    label: "Dec 18",
+    ranks: "#1",
+    rankNumbers: [1],
     dayIndex: 3,
   },
   {
-    date: new Date("2025-12-05T15:00:00Z"),
-    label: "Dec 5",
-    ranks: "#4, 3, 2",
-    rankNumbers: [4, 3, 2],
+    date: new Date("2025-12-19T15:00:00Z"),
+    label: "Dec 19",
+    ranks: "#11-25",
+    rankNumbers: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
     dayIndex: 4,
-  },
-  {
-    date: new Date("2025-12-06T15:00:00Z"),
-    label: "Dec 6",
-    ranks: "#1",
-    rankNumbers: [1],
-    dayIndex: 5,
   },
 ];
 

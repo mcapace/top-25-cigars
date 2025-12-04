@@ -1,4 +1,5 @@
 import { Hero } from "@/components/layout/Hero";
+import { ProcessSection } from "@/components/layout/ProcessSection";
 import { CigarGrid } from "@/components/cigar/CigarGrid";
 import { BackToTop } from "@/components/ui/BackToTop";
 import { ScrollRestore } from "@/components/cigar/ScrollRestore";
@@ -19,6 +20,7 @@ export default function Home() {
       <div className="-mt-[124px]">
         <Hero />
       </div>
+      <ProcessSection />
       <CigarGrid />
       <BackToTop />
     </>

@@ -156,19 +156,19 @@ export function Hero() {
 
       {/* Foreground Content Layer (moves fastest) */}
       <motion.div
-        className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 pb-20"
+        className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 pt-32 pb-20"
         style={{ opacity, scale, y: foregroundY }}
       >
         {/* Main Hero Text */}
-        <div className="space-y-2 sm:space-y-4 mb-8 sm:mb-12 md:mb-16">
-          {/* Cigar Aficionado Logo */}
-          <div className="relative mb-4 sm:mb-6 md:mb-8">
+        <div className="space-y-2 sm:space-y-4 mb-8 sm:mb-12 md:mb-16 mt-8 sm:mt-12 md:mt-16">
+          {/* Cigar Aficionado Logo - White */}
+          <div className="relative mb-6 sm:mb-8 md:mb-10">
             <Image
               src="/images/logos/cigar_aficionado_logo.png"
               alt="Cigar Aficionado"
               width={300}
               height={90}
-              className="w-auto h-12 sm:h-16 md:h-20 lg:h-24 xl:h-28 object-contain mx-auto"
+              className="w-auto h-14 sm:h-18 md:h-24 lg:h-28 xl:h-32 object-contain mx-auto brightness-0 invert"
               priority
             />
           </div>
