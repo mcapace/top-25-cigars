@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAF7F2;
-  --foreground: #2D2926;
+  --background: #f2ece6;
+  --foreground: #4a1b01;
 }
 
 @theme inline {
@@ -12,10 +12,11 @@
   --font-serif: var(--font-playfair);
   --font-cormorant: var(--font-cormorant);
   
-  /* Custom color palette - Cigar Aficionado */
-  --color-cream: #FAF7F2;
+  /* Custom color palette - Cigar Aficionado Official Colors */
+  --color-cream: #f2ece6;
   --color-warmWhite: #FFFDF9;
-  --color-charcoal: #2D2926;
+  --color-charcoal: #4a1b01;
+  --color-darkBrown: #58210d;
   --color-amber: #C4501C;
   --color-gold: #D4A84B;
   --color-stone: #78716C;
@@ -106,14 +107,14 @@ a,
 .animated-gradient {
   background: linear-gradient(
     -45deg,
-    #2D2926,
-    #3A342F,
-    #4A3D35,
-    #5C4A3F,
+    #4a1b01,
+    #58210d,
+    #5a2715,
+    #6b3823,
     #C4501C,
     #D4A84B,
     #8B6F47,
-    #2D2926
+    #4a1b01
   );
   background-size: 400% 400%;
   animation: gradient-shift 15s ease infinite;
@@ -132,9 +133,9 @@ a,
 .animate-shimmer {
   background: linear-gradient(
     90deg,
-    rgba(45, 41, 38, 0.1) 0%,
-    rgba(45, 41, 38, 0.2) 50%,
-    rgba(45, 41, 38, 0.1) 100%
+    rgba(74, 27, 1, 0.1) 0%,
+    rgba(74, 27, 1, 0.2) 50%,
+    rgba(74, 27, 1, 0.1) 100%
   );
   background-size: 1000px 100%;
   animation: shimmer 2s infinite;
@@ -142,10 +143,10 @@ a,
 
 /* Glass morphism utilities */
 .glass {
-  background: rgba(255, 253, 249, 0.7);
+  background: rgba(242, 236, 230, 0.7);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(45, 41, 38, 0.1);
+  border: 1px solid rgba(74, 27, 1, 0.1);
 }
 
 /* 3D perspective */
