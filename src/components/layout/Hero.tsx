@@ -162,13 +162,13 @@ export function Hero() {
         {/* Main Hero Text */}
         <div className="space-y-2 sm:space-y-4 mb-8 sm:mb-12 md:mb-16 mt-8 sm:mt-12 md:mt-16">
           {/* Cigar Aficionado Logo - White */}
-          <div className="relative mb-6 sm:mb-8 md:mb-10">
+          <div className="relative mb-4 sm:mb-6 md:mb-8">
             <Image
-              src="/images/logos/cigar_aficionado_logo.png"
+              src="/images/logos/111-1119158_cigar-aficionado-logo-hd-png-download.png"
               alt="Cigar Aficionado"
-              width={300}
-              height={90}
-              className="w-auto h-14 sm:h-18 md:h-24 lg:h-28 xl:h-32 object-contain mx-auto brightness-0 invert"
+              width={250}
+              height={75}
+              className="w-auto h-10 sm:h-12 md:h-16 lg:h-20 xl:h-24 object-contain mx-auto brightness-0 invert"
               priority
             />
           </div>

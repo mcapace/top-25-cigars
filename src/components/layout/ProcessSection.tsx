@@ -130,10 +130,10 @@ export function ProcessSection() {
   return (
     <section
       ref={ref}
-      className="relative py-16 md:py-24 lg:py-32 bg-gradient-to-b from-charcoal via-darkBrown to-charcoal overflow-hidden"
+      className="relative py-16 md:py-24 lg:py-32 bg-gradient-to-b from-cream via-warmWhite to-cream overflow-hidden"
     >
       {/* Decorative background elements */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-96 h-96 bg-gold rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-amber rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2" />
       </div>
@@ -146,10 +146,10 @@ export function ProcessSection() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
           className="text-center mb-12 md:mb-16 lg:mb-20"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-warmWhite mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-charcoal mb-4 tracking-tight">
             The Top 25 Process
           </h2>
-          <div className="w-24 h-0.5 bg-gold mx-auto"></div>
+          <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
         </motion.div>
 
         {/* Steps Grid */}
@@ -166,9 +166,9 @@ export function ProcessSection() {
               className="relative group"
             >
               {/* Step Card */}
-              <div className="relative h-full bg-cream/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-cream/10 hover:border-cream/20 transition-all duration-300 hover:bg-cream/10">
+              <div className="relative h-full bg-white/90 backdrop-blur-md rounded-3xl p-6 md:p-8 border border-charcoal/5 hover:border-gold/30 transition-all duration-300 hover:shadow-2xl shadow-lg hover:-translate-y-1">
                 {/* Step Number Badge */}
-                <div className="absolute -top-4 -left-4 w-12 h-12 md:w-14 md:h-14 rounded-full bg-gold flex items-center justify-center shadow-lg">
+                <div className="absolute -top-4 -left-4 w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-gold to-amber flex items-center justify-center shadow-xl ring-4 ring-white">
                   <span className="text-charcoal font-serif font-bold text-xl md:text-2xl">
                     {step.number}
                   </span>
@@ -179,7 +179,7 @@ export function ProcessSection() {
                   variants={iconVariants}
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="w-24 h-24 md:w-28 md:h-28 mx-auto mb-6 rounded-full bg-gradient-to-br from-darkBrown/30 to-charcoal/30 border-2 border-cream/20 flex items-center justify-center text-cream group-hover:border-gold/50 transition-colors duration-300"
+                  className="w-24 h-24 md:w-28 md:h-28 mx-auto mb-6 rounded-full bg-gradient-to-br from-charcoal/5 to-darkBrown/10 border-2 border-charcoal/10 flex items-center justify-center text-charcoal group-hover:border-gold/40 group-hover:bg-gradient-to-br group-hover:from-gold/10 group-hover:to-amber/10 transition-all duration-300"
                 >
                   <div className="w-16 h-16 md:w-20 md:h-20">
                     {step.icon}
@@ -187,21 +187,21 @@ export function ProcessSection() {
                 </motion.div>
 
                 {/* Step Title */}
-                <h3 className="text-xl md:text-2xl font-serif font-semibold text-warmWhite mb-3 text-center">
+                <h3 className="text-xl md:text-2xl font-serif font-semibold text-charcoal mb-3 text-center">
                   {step.title}
                 </h3>
 
                 {/* Step Description */}
-                <p className="text-cream/80 text-sm md:text-base leading-relaxed text-center font-sans">
+                <p className="text-stone text-sm md:text-base leading-relaxed text-center font-sans">
                   {step.description}
                 </p>
 
                 {/* Connecting arrow to next step (desktop only) */}
                 {index < steps.length - 1 && (
                   <div className="hidden lg:flex absolute top-1/2 -right-6 transform -translate-y-1/2 items-center">
-                    <div className="w-8 h-0.5 bg-gradient-to-r from-gold/60 to-gold/30"></div>
+                    <div className="w-8 h-0.5 bg-gradient-to-r from-gold/40 to-transparent"></div>
                     <svg
-                      className="w-4 h-4 text-gold/60"
+                      className="w-4 h-4 text-gold/50"
                       fill="none"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -223,7 +223,7 @@ export function ProcessSection() {
           initial={{ opacity: 0, scaleX: 0 }}
           animate={isInView ? { opacity: 1, scaleX: 1 } : { opacity: 0, scaleX: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
-          className="mt-16 md:mt-20 lg:mt-24 h-0.5 bg-gradient-to-r from-transparent via-gold/50 to-transparent"
+          className="mt-16 md:mt-20 lg:mt-24 h-0.5 bg-gradient-to-r from-transparent via-gold/30 to-transparent"
         />
       </div>
     </section>

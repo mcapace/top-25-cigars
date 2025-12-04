@@ -1,23 +1,101 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Cormorant_Garamond } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
+// Pulpo font for headlines
+const pulpo = localFont({
+  src: [
+    {
+      path: "../../fonts/Pulpo-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Pulpo-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Pulpo-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Pulpo-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Pulpo-Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Pulpo-LightItalic.ttf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../../fonts/Pulpo-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../fonts/Pulpo-MediumItalic.ttf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../../fonts/Pulpo-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "../../fonts/Pulpo-BlackItalic.ttf",
+      weight: "900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-pulpo",
   display: "swap",
 });
 
-const cormorantGaramond = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+// Araboto font for body text
+const araboto = localFont({
+  src: [
+    {
+      path: "../../fonts/Araboto Thin 400.ttf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Araboto Light 400.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Araboto Normal 400.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Araboto Medium 400.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Araboto Bold 400.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Araboto Black 400.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-araboto",
   display: "swap",
 });
 
@@ -64,9 +142,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfairDisplay.variable} ${cormorantGaramond.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${pulpo.variable} ${araboto.variable}`} suppressHydrationWarning>
       <body
-        className={`${inter.className} antialiased bg-cream min-h-screen flex flex-col`}
+        className={`${araboto.className} antialiased bg-cream min-h-screen flex flex-col`}
         suppressHydrationWarning
       >
         {/* Google Analytics - Update with Cigar Aficionado tracking ID */}

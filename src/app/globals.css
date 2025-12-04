@@ -8,9 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
-  --font-cormorant: var(--font-cormorant);
+  --font-sans: var(--font-araboto);
+  --font-serif: var(--font-pulpo);
   
   /* Custom color palette - Cigar Aficionado Official Colors */
   --color-cream: #f2ece6;
@@ -25,7 +24,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-araboto), system-ui, sans-serif;
   /* Smooth momentum scrolling for iOS */
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-y: contain;
