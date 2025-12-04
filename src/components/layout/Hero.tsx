@@ -180,7 +180,7 @@ export function Hero() {
           </div>
 
           <div className="relative">
-            <h2 className="text-[32px] sm:text-[40px] md:text-[60px] lg:text-[90px] xl:text-[110px] font-serif font-bold text-gold leading-[0.9] tracking-tight relative">
+            <h2 className="text-[32px] sm:text-[40px] md:text-[60px] lg:text-[90px] xl:text-[110px] font-serif font-light text-gold leading-[0.9] tracking-tight relative">
               2025
             </h2>
           </div>
