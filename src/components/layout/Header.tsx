@@ -21,20 +21,20 @@ export function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-gradient-to-b from-darkBrown/70 via-darkBrown/60 to-charcoal/50 backdrop-blur-xl border-b border-gold/30 shadow-2xl">
+    <header className="sticky top-0 z-50 w-full bg-gradient-to-b from-charcoal via-darkBrown to-charcoal backdrop-blur-md border-b border-charcoal/30 shadow-xl">
       {/* Top Section - Logo, Subscribe, Search */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <div className="flex flex-col">
-              <span className="text-warmWhite font-serif text-lg sm:text-xl font-medium leading-tight drop-shadow-lg">
-                cigar
-              </span>
-              <span className="text-warmWhite font-serif text-2xl sm:text-3xl md:text-4xl font-bold leading-tight -mt-1 drop-shadow-lg">
-                aficionado
-              </span>
-            </div>
+            <Image
+              src="/images/logos/111-1119158_cigar-aficionado-logo-hd-png-download.png"
+              alt="Cigar Aficionado"
+              width={200}
+              height={60}
+              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain brightness-0 invert"
+              priority
+            />
           </Link>
 
           {/* Right side actions */}
@@ -57,7 +57,7 @@ export function Header() {
       </div>
 
       {/* Navigation Bar */}
-      <nav className="border-t border-gold/30 bg-gradient-to-r from-charcoal/40 via-darkBrown/35 to-charcoal/40 backdrop-blur-md">
+      <nav className="border-t border-charcoal/40 bg-charcoal/95 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between overflow-x-auto scrollbar-hide">
             <ul className="flex items-center gap-4 sm:gap-6 lg:gap-8 py-3">
