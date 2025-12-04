@@ -84,6 +84,8 @@ export function CigarGrid() {
       .then((response) => {
         const cigars = response.cigars || response;
         if (Array.isArray(cigars) && cigars.length > 0) {
+          console.log(`[CigarGrid] Received ${cigars.length} cigars from API`);
+          console.log(`[CigarGrid] Cigars with names: ${cigars.filter(c => c.name).length}`);
           setCigarsData(cigars);
         }
       })
@@ -123,9 +125,10 @@ export function CigarGrid() {
   
   // Check if a cigar should be shown as revealed (has data)
   const shouldShowAsRevealed = (cigar: CigarPublic): boolean => {
+    // TEMPORARY: In demo mode, show ALL cigars that have any data
     if (FORCE_PREVIEW_FOR_DEMO) {
-      // In preview mode, show if cigar has name (full data from API)
-      return Boolean(cigar.name);
+      // Show cigars if they have a name (full data) OR if we're in demo mode (show everything)
+      return true; // Show all cigars in demo mode
     }
     // Normal mode: check if revealed and has data
     return Boolean(cigar.name && safeIsRevealed(cigar.rank));
@@ -177,8 +180,11 @@ export function CigarGrid() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7 items-stretch">
           {sortedCigars.map((cigar, index) => {
-            // Check if cigar should be shown as revealed
-            const isRevealedCigar = shouldShowAsRevealed(cigar);
+            // TEMPORARY: In demo mode, show all cigars
+            // If cigar has name, show as revealed card; otherwise show mystery card
+            const isRevealedCigar = FORCE_PREVIEW_FOR_DEMO 
+              ? Boolean(cigar.name) 
+              : shouldShowAsRevealed(cigar);
             const isRankOne = Boolean(cigar.rank === 1 && isRevealedCigar);
             const displayRank = cigar.rank;
 
