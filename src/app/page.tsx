@@ -17,9 +17,7 @@ export default function Home() {
   return (
     <>
       <ScrollRestore />
-      <div className="-mt-[124px]">
-        <Hero />
-      </div>
+      <Hero />
       <ProcessSection />
       <CigarGrid />
       <BackToTop />

@@ -2,88 +2,32 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { ListFilter, Eye, GitCompare, Trophy } from "lucide-react";
 
 const steps = [
   {
     number: 1,
     title: "Review & Assemble",
     description: "We review the highest-scoring cigars from the past year and assemble a new tasting of only these cigars.",
-    icon: (
-      <svg viewBox="0 0 100 100" className="w-full h-full">
-        {/* Three horizontal cigars - top */}
-        <rect x="5" y="30" width="25" height="7" rx="3.5" fill="currentColor" opacity="0.85" />
-        <rect x="5" y="37" width="6" height="3" rx="1.5" fill="currentColor" />
-        <rect x="30" y="37" width="6" height="3" rx="1.5" fill="currentColor" />
-        
-        {/* Three horizontal cigars - middle (slightly larger) */}
-        <rect x="37" y="35" width="26" height="7" rx="3.5" fill="currentColor" opacity="1" />
-        <rect x="37" y="42" width="6" height="3" rx="1.5" fill="currentColor" />
-        <rect x="63" y="42" width="6" height="3" rx="1.5" fill="currentColor" />
-        
-        {/* Three horizontal cigars - bottom */}
-        <rect x="5" y="48" width="25" height="7" rx="3.5" fill="currentColor" opacity="0.85" />
-        <rect x="5" y="55" width="6" height="3" rx="1.5" fill="currentColor" />
-        <rect x="30" y="55" width="6" height="3" rx="1.5" fill="currentColor" />
-      </svg>
-    ),
+    icon: ListFilter,
   },
   {
     number: 2,
     title: "Blind Tasting",
     description: "Repurchase, re-band and then re-smoke the cigars blind—tasters don't know the identity of the cigar.",
-    icon: (
-      <svg viewBox="0 0 100 100" className="w-full h-full">
-        {/* Single horizontal cigar (no band) */}
-        <rect x="25" y="45" width="50" height="10" rx="5" fill="currentColor" />
-        {/* Smoke lines rising from right end */}
-        <path d="M 73 48 Q 78 42, 80 35 Q 82 28, 82 20" stroke="currentColor" strokeWidth="2.5" fill="none" opacity="0.65" strokeLinecap="round" />
-        <path d="M 76 50 Q 81 44, 83 37 Q 85 30, 85 22" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.45" strokeLinecap="round" />
-      </svg>
-    ),
+    icon: Eye,
   },
   {
     number: 3,
     title: "Competitive Rounds",
     description: "The top-scoring cigars are then smoked against each other through multiple rounds.",
-    icon: (
-      <svg viewBox="0 0 100 100" className="w-full h-full">
-        {/* Two crossed cigars in X shape */}
-        <g transform="translate(50,50) rotate(-30)">
-          <rect x="-18" y="-5" width="36" height="10" rx="5" fill="currentColor" opacity="0.9" />
-          {/* Smoke from upper end */}
-          <path d="M 18 -5 Q 23 -12, 25 -18 Q 27 -24, 27 -30" stroke="currentColor" strokeWidth="2.5" fill="none" opacity="0.65" strokeLinecap="round" />
-        </g>
-        <g transform="translate(50,50) rotate(30)">
-          <rect x="-18" y="-5" width="36" height="10" rx="5" fill="currentColor" opacity="0.9" />
-          {/* Smoke from upper end */}
-          <path d="M 18 -5 Q 23 -12, 25 -18 Q 27 -24, 27 -30" stroke="currentColor" strokeWidth="2.5" fill="none" opacity="0.65" strokeLinecap="round" />
-        </g>
-      </svg>
-    ),
+    icon: GitCompare,
   },
   {
     number: 4,
     title: "Final Selection",
     description: "A new list of 25 cigars is assembled.",
-    icon: (
-      <svg viewBox="0 0 100 100" className="w-full h-full">
-        {/* Left vertical cigar */}
-        <rect x="15" y="30" width="8" height="45" rx="4" fill="currentColor" opacity="0.9" />
-        <rect x="17" y="25" width="4" height="6" rx="1" fill="currentColor" />
-        <circle cx="19" cy="18" r="3.5" fill="currentColor" opacity="0.7" />
-        
-        {/* Center vertical cigar (tallest, with #1 badge) */}
-        <rect x="46" y="25" width="8" height="50" rx="4" fill="currentColor" opacity="1" />
-        <rect x="48" y="20" width="4" height="6" rx="1" fill="currentColor" />
-        <circle cx="50" cy="12" r="4.5" fill="currentColor" opacity="1" />
-        <text x="50" y="16" textAnchor="middle" fill="#f2ece6" fontSize="7" fontWeight="bold" fontFamily="serif">1</text>
-        
-        {/* Right vertical cigar */}
-        <rect x="77" y="30" width="8" height="45" rx="4" fill="currentColor" opacity="0.9" />
-        <rect x="79" y="25" width="4" height="6" rx="1" fill="currentColor" />
-        <circle cx="81" cy="18" r="3.5" fill="currentColor" opacity="0.7" />
-      </svg>
-    ),
+    icon: Trophy,
   },
 ];
 
@@ -181,9 +125,7 @@ export function ProcessSection() {
                   transition={{ duration: 0.3, ease: "easeOut" }}
                   className="w-24 h-24 md:w-28 md:h-28 mx-auto mb-6 rounded-full bg-gradient-to-br from-charcoal/5 to-darkBrown/10 border-2 border-charcoal/10 flex items-center justify-center text-charcoal group-hover:border-gold/40 group-hover:bg-gradient-to-br group-hover:from-gold/10 group-hover:to-amber/10 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 md:w-20 md:h-20">
-                    {step.icon}
-                  </div>
+                  <step.icon className="w-12 h-12 md:w-14 md:h-14" strokeWidth={1.5} />
                 </motion.div>
 
                 {/* Step Title */}

@@ -33,6 +33,14 @@ export interface CigarPublic {
  * 2. Local development (NODE_ENV=development) without nopreview param
  */
 export function getPreviewMode(request?: Request): boolean {
+  // TEMPORARY: Force preview mode for team demo - show all cigars
+  // TODO: Set this to false before production launch
+  const FORCE_PREVIEW_FOR_DEMO = true;
+  if (FORCE_PREVIEW_FOR_DEMO) {
+    console.log('[getPreviewMode] Demo mode - ALL CIGARS VISIBLE');
+    return true;
+  }
+
   // CRITICAL: Check if this is Vercel production deployment FIRST
   // VERCEL_ENV is automatically set by Vercel: 'production', 'preview', or 'development'
   const isVercelProduction = process.env.VERCEL_ENV === 'production';
@@ -72,6 +80,13 @@ export function getPreviewMode(request?: Request): boolean {
       console.log('[getPreviewMode] nopreview=true - forcing preview mode OFF');
       return false;
     }
+  }
+
+  // Force preview mode for team demo - can be disabled later
+  const forcePreview = process.env.FORCE_PREVIEW === 'true';
+  if (forcePreview) {
+    console.log('[getPreviewMode] Force preview mode enabled');
+    return true;
   }
 
   // Local development defaults to preview mode
