@@ -98,8 +98,10 @@ export function CigarGrid() {
     const sorted = [...cigarsData].sort((a, b) => a.rank - b.rank);
 
     // Only check isRevealed after mounting to avoid hydration mismatch
+    // In preview mode, count all cigars with names as revealed
+    const FORCE_PREVIEW = true; // Temporary demo mode
     const revealed = isMounted
-      ? sorted.filter((c) => c.name && isRevealed(c.rank))
+      ? sorted.filter((c) => FORCE_PREVIEW ? Boolean(c.name) : (c.name && isRevealed(c.rank)))
       : [];
 
     return {
@@ -108,10 +110,25 @@ export function CigarGrid() {
     };
   }, [cigarsData, isMounted]);
 
+  // TEMPORARY: Force preview mode for team demo - show all cigars
+  const FORCE_PREVIEW_FOR_DEMO = true;
+
   // Safe wrapper for isRevealed that returns false during SSR
   const safeIsRevealed = (rank: number): boolean => {
     if (!isMounted) return false;
+    // Force show all cigars for demo
+    if (FORCE_PREVIEW_FOR_DEMO) return true;
     return isRevealed(rank);
+  };
+  
+  // Check if a cigar should be shown as revealed (has data)
+  const shouldShowAsRevealed = (cigar: CigarPublic): boolean => {
+    if (FORCE_PREVIEW_FOR_DEMO) {
+      // In preview mode, show if cigar has name (full data from API)
+      return Boolean(cigar.name);
+    }
+    // Normal mode: check if revealed and has data
+    return Boolean(cigar.name && safeIsRevealed(cigar.rank));
   };
 
   // Helper to create mystery card props
@@ -160,7 +177,8 @@ export function CigarGrid() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7 items-stretch">
           {sortedCigars.map((cigar, index) => {
-            const isRevealedCigar = cigar.name && safeIsRevealed(cigar.rank);
+            // Check if cigar should be shown as revealed
+            const isRevealedCigar = shouldShowAsRevealed(cigar);
             const isRankOne = Boolean(cigar.rank === 1 && isRevealedCigar);
             const displayRank = cigar.rank;
 

@@ -61,6 +61,14 @@ function getPreviewMode(): boolean {
     return false;
   }
 
+  // TEMPORARY: Force preview mode for team demo - show all cigars
+  // TODO: Set this to false before production launch
+  const FORCE_PREVIEW_FOR_DEMO = true;
+  if (FORCE_PREVIEW_FOR_DEMO) {
+    console.log('[Client] Demo mode - ALL CIGARS VISIBLE');
+    return true;
+  }
+
   // TEST MODE: ?testMystery=true forces mystery cards to show
   if (window.location.search.includes("testMystery=true")) {
     console.log(`[Client] Test mystery mode - Preview DISABLED to show mystery cards`);
