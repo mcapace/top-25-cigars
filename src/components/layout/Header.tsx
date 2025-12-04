@@ -59,7 +59,7 @@ export function Header() {
       {/* Navigation Bar */}
       <nav className="border-t border-charcoal/10 bg-gradient-to-r from-warmWhite/80 via-cream/90 to-warmWhite/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between overflow-x-auto scrollbar-hide">
+          <div className="flex items-center justify-center overflow-x-auto scrollbar-hide">
             <ul className="flex items-center gap-4 sm:gap-6 lg:gap-8 py-3">
               {navLinks.map((link) => (
                 <li key={link}>
