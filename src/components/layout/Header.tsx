@@ -40,7 +40,7 @@ export function Header() {
           {/* Right side actions */}
           <div className="flex items-center gap-3 sm:gap-4">
             {/* Subscribe Button */}
-            <button className="hidden sm:flex px-4 py-2 bg-warmWhite hover:bg-cream text-charcoal font-sans font-semibold text-sm rounded-md transition-colors duration-200 shadow-md hover:shadow-lg">
+            <button className="hidden sm:flex items-center justify-center px-5 py-2.5 bg-warmWhite hover:bg-warmWhite/95 text-charcoal font-sans font-semibold text-sm rounded transition-colors duration-200 shadow-sm hover:shadow-md min-h-[44px]">
               Subscribe
             </button>
             
