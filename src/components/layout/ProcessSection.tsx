@@ -105,7 +105,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   },
 };
@@ -118,14 +118,7 @@ const iconVariants = {
     transition: {
       duration: 0.5,
       delay: 0.2,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  },
-  hover: {
-    scale: 1.1,
-    transition: {
-      duration: 0.3,
-      ease: "easeOut",
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   },
 };
@@ -150,7 +143,7 @@ export function ProcessSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
           className="text-center mb-12 md:mb-16 lg:mb-20"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-warmWhite mb-4 tracking-tight">
@@ -184,7 +177,8 @@ export function ProcessSection() {
                 {/* Icon Circle */}
                 <motion.div
                   variants={iconVariants}
-                  whileHover="hover"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
                   className="w-24 h-24 md:w-28 md:h-28 mx-auto mb-6 rounded-full bg-gradient-to-br from-darkBrown/30 to-charcoal/30 border-2 border-cream/20 flex items-center justify-center text-cream group-hover:border-gold/50 transition-colors duration-300"
                 >
                   <div className="w-16 h-16 md:w-20 md:h-20">
@@ -228,7 +222,7 @@ export function ProcessSection() {
         <motion.div
           initial={{ opacity: 0, scaleX: 0 }}
           animate={isInView ? { opacity: 1, scaleX: 1 } : { opacity: 0, scaleX: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
           className="mt-16 md:mt-20 lg:mt-24 h-0.5 bg-gradient-to-r from-transparent via-gold/50 to-transparent"
         />
       </div>
