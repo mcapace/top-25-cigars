@@ -58,3 +58,4 @@ cigars-data.ts
 
 # Temporary reference files
 temp-wa-reference/
+**/temp-*/
