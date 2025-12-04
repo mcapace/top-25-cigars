@@ -28,7 +28,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/images/logos/111-1119158_cigar-aficionado-logo-hd-png-download.png"
+              src="/images/logos/images.png"
               alt="Cigar Aficionado"
               width={200}
               height={60}
